@@ -1,0 +1,373 @@
+#board {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.drag{
+	position: absolute;
+}
+
+
+#green1.green {
+	left:25px;
+}
+#green2.green {
+	left:75px;
+}
+#green3.green {
+	left:150px;
+}
+#green4.green {
+	left:225px;
+}
+#green5.green {
+	left:325px;
+}
+
+
+#green6.green {
+	top: 50px;
+	left:25px;
+}
+#green7.green {
+	top: 75px;
+	left:125px;
+}
+#green8.green {
+	top: 5px;
+	left:150px;
+}
+#green9.green {
+	top: 75px;
+	left:250px;
+}
+#green10.green {
+	top: 75px;
+	left:350px;
+}
+
+
+#green11.green {
+	top: 250px;
+	left:25px;
+}
+#green12.green {
+	top: 250px;
+	left:125px;
+}
+#green13.green {
+	top: 250px;
+	left:200px;
+}
+#green14.green {
+	top: 250px;
+	left:300px;
+}
+#green15.green {
+	top: 250px;
+	left:400px;
+}
+
+
+#green16.green {
+	top: 350px;
+	left:25px;
+}
+#green17.green {
+	top: 350px;
+	left: 100px;
+}
+#green18.green {
+	top: 350px;
+	left:200px;
+}
+#green19.green {
+	top: 350px;
+	left:250px;
+}
+#green20.green {
+	top: 350px;
+	left:325px;
+}
+#green21.green {
+	top: 400px;
+	left:375px;
+}
+
+#blue1.blue {
+	top: 1px;
+	right:25px;
+}
+#blue2.blue {
+	top: 1px;
+	right:75px;
+}
+#blue3.blue {
+	top: 1px;
+	right:150px;
+}
+#blue4.blue {
+	top: 1px;
+	right:225px;
+}
+#blue5.blue {
+	top: 1px;
+	right:325px;
+}
+
+
+#blue6.blue {
+	top: 50px;
+	right:25px;
+}
+#blue7.blue {
+	top: 75px;
+	right:125px;
+}
+#blue8.blue {
+	top: 350px;
+	right:150px;
+}
+#blue9.blue {
+	top: 75px;
+	right:250px;
+}
+#blue10.blue {
+	top: 75px;
+	right:350px;
+}
+
+
+#blue11.blue {
+	top: 150px;
+	right:25px;
+}
+#blue12.blue {
+	top: 150px;
+	right:120px;
+}
+#blue13.blue {
+	top: 150px;
+	right:200px;
+}
+#blue14.blue {
+	top: 150px;
+	right:305px;
+}
+#blue15.blue {
+	top: 170px;
+	right:400px;
+}
+
+
+#blue16.blue {
+	top: 250px;
+	right:25px;
+}
+#blue17.blue {
+	top: 250px;
+	right: 100px;
+}
+#blue18.blue {
+	top: 250px;
+	right:200px;
+}
+#blue19.blue {
+	top: 350px;
+	right:250px;
+}
+#blue20.blue {
+	top: 250px;
+	right:330px;
+}
+#blue21.blue {
+	top: 300px;
+	right:375px;
+}
+
+#red1.red {
+	left:25px;
+    bottom: 20px;
+}
+#red2.red {
+	left:75px;
+    bottom: 20px;
+}
+#red3.red {
+	left:150px;
+    bottom: 20px;
+}
+#red4.red {
+	left:225px;
+    bottom: 20px;
+}
+#red5.red {
+	left:325px;
+    bottom: 20px;
+}
+
+
+#red6.red {
+	bottom: 50px;
+	left:25px;
+}
+#red7.red {
+	bottom: 75px;
+	left:125px;
+}
+#red8.red {
+	bottom: 75px;
+	left:150px;
+}
+#red9.red {
+	bottom: 75px;
+	left:250px;
+}
+#red10.red {
+	bottom: 75px;
+	left:350px;
+}
+
+
+#red11.red {
+	bottom: 150px;
+	left:25px;
+}
+#red12.red {
+	bottom: 150px;
+	left:125px;
+}
+#red13.red {
+	bottom: 150px;
+	left:205px;
+}
+#red14.red {
+	bottom: 150px;
+	left:310px;
+}
+#red15.red {
+	bottom: 150px;
+	left:400px;
+}
+
+
+#red16.red {
+	bottom: 250px;
+	left:25px;
+}
+#red17.red {
+	bottom: 250px;
+	left: 100px;
+}
+#red18.red {
+	bottom: 250px;
+	left:200px;
+}
+#red19.red {
+	bottom: 250px;
+	left:250px;
+}
+#red20.red {
+	bottom: 250px;
+	left:325px;
+}
+#red21.red {
+	bottom: 300px;
+	left:400px;
+}
+
+
+#yellow1.yellow {
+	right:25px;
+    bottom: 20px;
+}
+#yellow2.yellow {
+	right:75px;
+    bottom: 20px;
+}
+#yellow3.yellow {
+	right:150px;
+    bottom: 20px;
+}
+#yellow4.yellow {
+	right:225px;
+    bottom: 20px;
+}
+#yellow5.yellow {
+	right:325px;
+    bottom: 20px;
+}
+
+
+#yellow6.yellow {
+	bottom: 50px;
+	right:25px;
+}
+#yellow7.yellow {
+	bottom: 75px;
+	right:125px;
+}
+#yellow8.yellow {
+	bottom: 75px;
+	right:150px;
+}
+#yellow9.yellow {
+	bottom: 75px;
+	right:250px;
+}
+#yellow10.yellow {
+	bottom: 75px;
+	right:350px;
+}
+
+
+#yellow11.yellow {
+	bottom: 150px;
+	right:25px;
+}
+#yellow12.yellow {
+	bottom: 150px;
+	right:125px;
+}
+#yellow13.yellow {
+	bottom: 150px;
+	right:205px;
+}
+#yellow14.yellow {
+	bottom: 150px;
+	right:310px;
+}
+#yellow15.yellow {
+	bottom: 150px;
+	right:400px;
+}
+
+
+#yellow16.yellow {
+	bottom: 250px;
+	right:25px;
+}
+#yellow17.yellow {
+	bottom: 250px;
+	right: 100px;
+}
+#yellow18.yellow {
+	bottom: 250px;
+	right:200px;
+}
+#yellow19.yellow {
+	bottom: 250px;
+	right:250px;
+}
+#yellow20.yellow {
+	bottom: 250px;
+	right:325px;
+}
+#yellow21.yellow {
+	bottom: 300px;
+	right:400px;
+}
