@@ -1,0 +1,20 @@
+{
+  "name": "final-proj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osu-cs290-sp20/final-project-team-20.git"
+  },
+  "author": "Katelyn Nguyen, Timur Ermoshkin, Caden Burke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osu-cs290-sp20/final-project-team-20/issues"
+  },
+  "homepage": "https://github.com/osu-cs290-sp20/final-project-team-20#readme"
+}
