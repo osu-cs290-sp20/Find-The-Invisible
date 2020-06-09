@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    
+    <body>
+
+	<img src="https://cdn.discordapp.com/attachments/578431477566537759/599827204339400719/585741835620712459.png" id="image" 	style="position: fixed;" width = "50" height = "50">
+    
+    <audio id="bruh1">
+	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643582318903326/Bruh_Sound_Effect_1.mp3" type="audio/mpeg">
+	</audio>
+    
+    <audio id="bruh2">
+	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643586932506755/Bruh_Sound_Effect_2.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="bruh3">
+	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643591072284772/Bruh_Sound_Effect_3.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="bruh4">
+	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643594784243763/Bruh_Sound_Effect_4.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="bruh5">
+	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643598282424330/Bruh_Sound_Effect_5.mp3" type="audio/mpeg">
+	</audio>
+
+    
+    <input type="text" id="cursorX" size="3"> X-position of the mouse cursor
+	<input type="text" id="cursorY" size="3"> Y-position of the mouse cursor
+
+
+     <script>
+     	 var sound1 = document.getElementById("bruh1"); 
+         var sound2 = document.getElementById("bruh2"); 
+         var sound3 = document.getElementById("bruh3");
+         var sound4 = document.getElementById("bruh4"); 
+         var sound5 = document.getElementById("bruh5"); 
+     	 var imageX;
+         var imageY;
+         window.onLoad = Prep();
+            
+         function Prep(){
+         
+         		if (window.Event) {
+					document.captureEvents(Event.MOUSEMOVE);
+				}
+                
+              
+				document.onmousemove = getCursorXY;
+
+				function getCursorXY(e) {
+  					document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? 					 document.documentElement.scrollLeft : document.body.scrollLeft);
+    
+					document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? 					document.documentElement.scrollTop : document.body.scrollTop);
+                    
+                    var cursorX = document.getElementById('cursorX').value;
+                    var cursorY = document.getElementById('cursorY').value;
+
+                
+                	if(cursorX >= imageX && cursorX <= imageX+50 && cursorY >= imageY && cursorY <= imageY+50){
+                		sound5.play();
+               	 	}
+
+                    else{
+                    	sound1.play();
+                    }
+                    
+
+				}
+                
+          		window_Height = window.innerHeight;
+                window_Width = window.innerWidth;
+                
+                image_Element = document.getElementById("image");
+                image_Height = image_Element.clientHeight;
+                image_Width = image_Element.clientWidth;
+                
+                availSpace_V = window_Height - image_Height;
+                availSpace_H = window_Width - image_Width;
+            
+                imageY = Math.round(Math.random() * availSpace_V);
+                imageX = Math.round(Math.random() * availSpace_H);
+                
+                image_Element.style.top = imageY + "px";
+                image_Element.style.left = imageX + "px";
+            }
+        </script>
+    </body>
+</html>
