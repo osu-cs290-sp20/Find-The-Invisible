@@ -9,24 +9,24 @@
 	<img src="https://cdn.discordapp.com/attachments/578431477566537759/599827204339400719/585741835620712459.png" id="image" 	style="position: fixed;" width = "50" height = "50">
     
     <audio id="bruh1">
-	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643582318903326/Bruh_Sound_Effect_1.mp3" type="audio/mpeg">
+	<source src="audio/breakfast.ogg" type="audio/ogg">
 	</audio>
     
     <audio id="bruh2">
-	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643586932506755/Bruh_Sound_Effect_2.mp3" type="audio/mpeg">
+	<source src="audio/breakfast.ogg" type="audio/ogg">
 	</audio>
 
 	<audio id="bruh3">
-	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643591072284772/Bruh_Sound_Effect_3.mp3" type="audio/mpeg">
-	</audio>
+	<source src="audio/breakfast.ogg" type="audio/ogg">
+    </audio>
 
 	<audio id="bruh4">
-	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643594784243763/Bruh_Sound_Effect_4.mp3" type="audio/mpeg">
-	</audio>
+	<source src="audio/breakfast.ogg" type="audio/ogg">
+    </audio>
 
 	<audio id="bruh5">
-	<source src="https://cdn.discordapp.com/attachments/717813606296584322/719643598282424330/Bruh_Sound_Effect_5.mp3" type="audio/mpeg">
-	</audio>
+	<source src="audio/breakfast.ogg" type="audio/ogg">
+    </audio>
 
     
     <input type="text" id="cursorX" size="3"> X-position of the mouse cursor
@@ -38,7 +38,12 @@
          var sound2 = document.getElementById("bruh2"); 
          var sound3 = document.getElementById("bruh3");
          var sound4 = document.getElementById("bruh4"); 
-         var sound5 = document.getElementById("bruh5"); 
+         var sound5 = document.getElementById("bruh5");
+         sound1.volume = 0.1;
+         sound2.volume = 0.2;
+         sound3.volume = 0.4;
+         sound4.volume = 0.6;
+         sound5.volume = 1.0;
      	 var imageX;
          var imageY;
          window.onLoad = Prep();
@@ -61,12 +66,29 @@
                     var cursorY = document.getElementById('cursorY').value;
 
                 
-                	if(cursorX >= imageX && cursorX <= imageX+50 && cursorY >= imageY && cursorY <= imageY+50){
-                		sound5.play();
+                	if(cursorX < imageX-350 || cursorX > imageX+400 || cursorY < imageY-350 || cursorY > imageY+400){
+                        sound2.load();
+                		sound1.play();
                	 	}
 
+                    else if (cursorX < imageX-250 || cursorX > imageX+300 || cursorY < imageY-250 || cursorY > imageY+300) {
+                        sound1.load();
+                        sound3.load();
+                        sound2.play();
+                    }
+                    else if (cursorX < imageX-150 || cursorX > imageX+200 || cursorY < imageY-150 || cursorY > imageY+200) {
+                        sound2.load();
+                        sound4.load();
+                        sound3.play();
+                    }
+                    else if (cursorX < imageX || cursorX > imageX+50 || cursorY < imageY || cursorY > imageY+50) {
+                        sound3.load();
+                        sound5.load();
+                        sound4.play();
+                    }
                     else{
-                    	sound1.play();
+                        sound4.load();
+                    	sound5.play();
                     }
                     
 
