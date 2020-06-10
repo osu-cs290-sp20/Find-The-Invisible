@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>Menu</title>
+
+ 	  <link rel="stylesheet" href="style.css">
+    <script src="index.js" charset="utf-8" defer></script>
+
+  </head>
+
+  <body>
+  	<header>
+  		<h1 class = "game-title"> Find the Invisible </h1>
+  		<h1 type="text" class = "game-type" id = "game-type"> _____ </h1>
+  	</header>
+
+  	<main>
+      <div class="wrapper">
+        {{#each invisibleOptions}}
+            {{> invisibleThing}}
+        {{/each}}
+      </div>
+
+      <div class="wrap">
+        {{#if hess}}
+  		  <a href ="game/hess" class = "begin">
+  		  	Begin
+  		  </a>
+        {{/if}}
+        {{#if benny}}
+  		  <a href ="game/benny" class = "begin">
+  		  	Begin
+  		  </a>
+        {{/if}}
+      </div>
+
+
+  	</main>
+
+
+  </body>

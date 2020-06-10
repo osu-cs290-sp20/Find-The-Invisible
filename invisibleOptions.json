@@ -1,0 +1,12 @@
+[
+    {
+        "iconClass": "icon benny",
+        "photo": "photos/benny.png",
+        "alternate": "Cow"
+    },
+    {
+        "iconClass": "icon hess",
+        "photo": "photos/hess.png",
+        "alternate": "Hess"
+    }
+]
