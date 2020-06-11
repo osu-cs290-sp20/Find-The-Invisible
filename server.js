@@ -33,13 +33,17 @@ app.get('/game/audio/breakfast.ogg', function (req, res) {
   res.sendFile(__dirname + "/public/audio/breakfast.ogg");
 });
 
+app.get('/game/audio/gobeavs.ogg', function (req, res) {
+  res.sendFile(__dirname + "/public/audio/gobeavs.ogg");
+});
+
 app.get('/game/:n', function (req, res, next) {
   var n = req.params.n;
   
   if (n == "benny") {
     res.status(200).render('gamePage', {
       photo: "https://i.imgur.com/Ij3d92I.png",
-      source: "audio/breakfast.ogg",
+      source: "audio/gobeavs.ogg",
       type: "audio/ogg"
       });
     

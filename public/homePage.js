@@ -26,7 +26,7 @@ templates['hiddenPic'] = template({"compiler":[8,">= 4.3.0"],"main":function(con
 
   return "<img src=\""
     + alias4(((helper = (helper = lookupProperty(helpers,"photo") || (depth0 != null ? lookupProperty(depth0,"photo") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"photo","hash":{},"data":data,"loc":{"start":{"line":1,"column":10},"end":{"line":1,"column":19}}}) : helper)))
-    + "\" id=\"image\" style=\"position: absolute;\" width = \"50\" height = \"50\" onclick=\"hideImage()\">\r\n<audio id=\"sound\">\r\n	<source src=\""
+    + "\" id=\"image\" style=\"position: absolute;\" width = \"50\" height = \"50\">\r\n<audio id=\"sound\">\r\n	<source src=\""
     + alias4(((helper = (helper = lookupProperty(helpers,"source") || (depth0 != null ? lookupProperty(depth0,"source") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"source","hash":{},"data":data,"loc":{"start":{"line":3,"column":14},"end":{"line":3,"column":24}}}) : helper)))
     + "\" type=\""
     + alias4(((helper = (helper = lookupProperty(helpers,"type") || (depth0 != null ? lookupProperty(depth0,"type") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"type","hash":{},"data":data,"loc":{"start":{"line":3,"column":32},"end":{"line":3,"column":40}}}) : helper)))
