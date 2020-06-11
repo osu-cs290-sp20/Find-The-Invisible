@@ -1,15 +1,19 @@
 
     window.onload = playGame;
-    function playGame() {    
+    
+    function playGame() {
+            
             var sound = document.getElementById("sound");
             var imageX;
             var imageY;
-            setInterval(function () {sound.play();}, 700);
+            var interval = setInterval(function () {sound.play();}, 700);
 
         document.getElementById('image').addEventListener('click', function() {
             console.log("clicked");
             document.getElementById('image').style.opacity = "100";
-            
+            document.body.style.backgroundColor = "rgb(0, 174, 255)";
+            clearInterval(interval);
+            document.getElementsByClassName('gameOverScreen')[0].style.visibility = "visible";
          });
          
          window.addEventListener('mousemove', function (e) {
@@ -31,4 +35,19 @@
                     	sound.volume = 1;
                     }
          });
-    }
+                window_Height = window.innerHeight;
+                window_Width = window.innerWidth;
+                
+                image_Element = document.getElementById("image");
+                image_Height = image_Element.clientHeight;
+                image_Width = image_Element.clientWidth;
+                
+                availSpace_V = window_Height - image_Height;
+                availSpace_H = window_Width - image_Width;
+            
+                imageY = Math.round(Math.random() * availSpace_V);
+                imageX = Math.round(Math.random() * availSpace_H);
+                
+                image_Element.style.top = imageY + "px";
+                image_Element.style.left = imageX + "px";
+            }

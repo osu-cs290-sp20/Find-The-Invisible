@@ -11,9 +11,7 @@ app.use(express.static('public'));
 
 app.get('/', function (req, res) {
   res.status(200).render('homePage', {
-    invisibleOptions: invisibleOptionsContent,
-    benny: true,
-    hess: false
+    invisibleOptions: invisibleOptionsContent
     });
 });
 
@@ -23,6 +21,12 @@ app.get ('*/style.css', function (req, res) {
 
 app.get ('*/game.js', function (req, res) {
   res.sendFile(__dirname + "/public/game.js");
+});
+
+app.get('*/menu', function (req, res) {
+  res.status(200).render('homePage', {
+    invisibleOptions: invisibleOptionsContent
+    });
 });
 
 app.get('/game/audio/breakfast.ogg', function (req, res) {

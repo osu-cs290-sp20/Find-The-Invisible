@@ -15,6 +15,12 @@ h1 {
 	text-align:center;
 }
 
+.gameOverScreen {
+	position: absolute;
+	left: 45%;
+	visibility: hidden;
+}
+
 .wrapper{
 	text-align: center;
 }
