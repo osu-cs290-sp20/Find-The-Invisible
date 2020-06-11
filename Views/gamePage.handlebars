@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+    
+    <script src="game.js" charset="utf-8" defer></script>
 
     </head>
     
@@ -9,67 +11,6 @@
     
     {{>hiddenPic}}
 
-     <script>
-     	 var sound = document.getElementById("breakfast");
-     	 var imageX;
-         var imageY;
-         window.onLoad = Prep();
-         setInterval(function () {sound.play();}, 700);
-         
-         function Prep(){
-         
-         		if (window.Event) {
-					document.captureEvents(Event.MOUSEMOVE);
-				}
-                
-              
-				document.onmousemove = getCursorXY;
-
-				function getCursorXY(e) {
-  					document.getElementById('cursorX').value = (window.Event) ? e.pageX : event.clientX + (document.documentElement.scrollLeft ? 					 document.documentElement.scrollLeft : document.body.scrollLeft);
-    
-					document.getElementById('cursorY').value = (window.Event) ? e.pageY : event.clientY + (document.documentElement.scrollTop ? 					document.documentElement.scrollTop : document.body.scrollTop);
-                    
-                    var cursorX = document.getElementById('cursorX').value;
-                    var cursorY = document.getElementById('cursorY').value;
-
-                
-                	if(cursorX < imageX-650 || cursorX > imageX+700 || cursorY < imageY-650 || cursorY > imageY+700){
-                		sound.volume = 0.1;
-               	 	}
-
-                    else if (cursorX < imageX-450 || cursorX > imageX+500 || cursorY < imageY-450 || cursorY > imageY+500) {
-                        sound.volume = 0.2;
-                    }
-                    else if (cursorX < imageX-250 || cursorX > imageX+300 || cursorY < imageY-250 || cursorY > imageY+300) {
-                        sound.volume = 0.4;
-                    }
-                    else if (cursorX < imageX || cursorX > imageX+50 || cursorY < imageY || cursorY > imageY+50) {
-                        sound.volume = 0.6;
-                    }
-                    else{
-                    	sound.volume = 1;
-                    }
-                    
-
-				}
-                
-          		window_Height = window.innerHeight;
-                window_Width = window.innerWidth;
-                
-                image_Element = document.getElementById("image");
-                image_Height = image_Element.clientHeight;
-                image_Width = image_Element.clientWidth;
-                
-                availSpace_V = window_Height - image_Height;
-                availSpace_H = window_Width - image_Width;
-            
-                imageY = Math.round(Math.random() * availSpace_V);
-                imageX = Math.round(Math.random() * availSpace_H);
-                
-                image_Element.style.top = imageY + "px";
-                image_Element.style.left = imageX + "px";
-            }
-        </script>
+     
     </body>
 </html>

@@ -17,6 +17,14 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get ('*/style.css', function (req, res) {
+  res.sendFile(__dirname + "/public/style.css");
+});
+
+app.get ('*/game.js', function (req, res) {
+  res.sendFile(__dirname + "/public/game.js");
+});
+
 app.get('/game/audio/breakfast.ogg', function (req, res) {
   res.sendFile(__dirname + "/public/audio/breakfast.ogg");
 });

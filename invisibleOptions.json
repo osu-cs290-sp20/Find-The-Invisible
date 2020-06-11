@@ -1,11 +1,11 @@
 [
     {
-        "iconClass": "icon benny",
+        "iconClass": "benny",
         "photo": "photos/benny.png",
         "alternate": "Benny"
     },
     {
-        "iconClass": "icon hess",
+        "iconClass": "hess",
         "photo": "photos/hess.png",
         "alternate": "Hess"
     }
